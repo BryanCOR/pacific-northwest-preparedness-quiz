@@ -181,7 +181,7 @@ function correctAnswerFeedback() {
 };
 
 function goodJobFeedback() {
-   return `<div class="feedbackDiv">
+   return `<div class="feedbackDiv" role="feedback">
     <h2>Good Job! You may yet survive!</h2>
     <button class="js-next-question buttonStyle" placeholder="Next Question">Next Question</button>
     </div>`;
@@ -192,7 +192,7 @@ function wrongAnswerFeedback() {
 };
 
 function badJobFeedback() {
-  return `<div class="feedbackDiv">
+  return `<div class="feedbackDiv" role="feedback">
     <h2>Not Quite...</h2>
     <h3>We don't judge you, but you should have answered "${DATA[questionCounter].correctAnswer}".</h3>
     <button class="js-next-question buttonStyle" placeholder="Next Question">Next Question</button>
@@ -209,14 +209,14 @@ function lastQuestionIncorrectAnsFeedback() {
 }
 
 function lastQuestionGoodJobFeedback() {
-  return `<div class="feedbackDiv">
+  return `<div class="feedbackDiv" role="feedback">
     <h2>Good Job! You may yet survive!</h2>
     <button class="js-see-results buttonStyle">See Results</button>
     </div>`;
 };
 
 function lastQuestionBadJobFeedback() {
-  return `<div class="feedbackDiv">
+  return `<div class="feedbackDiv" role="feedback">
     <h2>Not Quite...</h2>
     <h3>We don't judge you, but you should have answered "${DATA[questionCounter].correctAnswer}".</h3>
     <button class="js-see-results buttonStyle">See Results</button>
@@ -227,7 +227,7 @@ function handleResultsPage() {
   quizReload();   
   
   function userGreatResults() {
-      return `<div class="resultsDiv">
+      return `<div class="resultsDiv" role="final-results">
      <h2>You Totally Rock!!</h2>
      <h3>Feel free to move here</h3>
      <button class="reloadQuizButton buttonStyle">Start Over</button>
@@ -235,7 +235,7 @@ function handleResultsPage() {
     }
   
   function userOkayResults() {
-      return `<div class="resultsDiv">
+      return `<div class="resultsDiv" role="final-results">
      <h2>You Barely Survived</h2>
      <h3>Feel free to Visit!</h3>
      <button class="reloadQuizButton buttonStyle">Start Over</button>
@@ -244,7 +244,7 @@ function handleResultsPage() {
 
   
   function userBadResults() {
-      return `<div class="resultsDiv">
+      return `<div class="resultsDiv" role="final-results">
      <h2>Wow! You didn't survive!</h2>
      <h3>Feel free to stay where you currently live!</h3>
      <button class="reloadQuizButton buttonStyle">Start Over</button>
